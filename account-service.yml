@@ -14,7 +14,7 @@ security:
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://192.168.0.114:3306/dev
+    url: jdbc:mysql://172.17.118.61:3306/dev
     username: root
     password: dbpass
     initialize: false
@@ -36,7 +36,7 @@ spring:
 security:
   oauth2:
     resource:
-      userInfoUri: http://${DOCKER_IP:192.168.0.114}:8181/uaa/user
+      userInfoUri: http://${DOCKER_IP:172.17.118.61}:8181/uaa/user
     client:
       client-id: acme
 eureka:
